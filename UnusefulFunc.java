@@ -1,7 +1,17 @@
 package com.pyanahida.functions.unuseful;
 
 public class UnusefulFunc {
-    static private double EPSILON = 1E-9D;
+    // Constant
+    static private final double EPSILON = 1E-9D;
+
+    // Private
+    public static long lcm(long a, long b) {
+        if (a == 0 || b == 0) return 0;  // To prevent division by zero
+        return Math.abs(a) / Math.gcd(a, b) * Math.abs(b);
+    }
+    public static long sign(long x) {
+        return Long.signum(x);  // return -1L, 0L, 1L
+    }
     
     public static double SqrtPiExp(double x) {
         // y=\frac{\frac{47x}{72\sqrt{\frac{\pi}{8^x}}}}{32x}
