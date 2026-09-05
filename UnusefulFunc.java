@@ -55,7 +55,7 @@ public class UnusefulFunc {
         return (x == 1) || (y == 0);
     }
     
-    public static double ExpSinProductFunc(double) {
+    public static double ExpSinProductFunc(double x) {
         // y=e^{x}\sin(100xe)
         return Math.exp(x)*Math.sin(100D*x*Math.E);
     }
