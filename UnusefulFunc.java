@@ -67,4 +67,30 @@ public class UnusefulFunc {
         long b = ThreadLocalRandom.current().nextLong(1L, 100L);
         return gcd(x, a) * lcm(x, b) * sign(x);
     }
+
+    public static double[] ManyANum(double x) {
+        double[] result = new double[UNIQUE.length];
+        for (int i = 0; i < UNIQUE.length; i++) {
+            result[i] = UNIQUE[i] * x;
+        }
+        return result;
+    }
+    
+// Planks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
