@@ -57,7 +57,7 @@ public class UnusefulFunc {
     }
     
     // Main
-    public static double SqrtPiExp(double x) {
+    public static double sqrtPiExp(double x) {
         // y=\frac{\frac{47x}{72\sqrt{\frac{\pi}{8^x}}}}{32x}
         if ((-EPSILON < x) && (x < EPSILON)) return Double.NaN;
         double a = 47D * x;
@@ -66,24 +66,24 @@ public class UnusefulFunc {
         return (a / b) / c;
     }
     
-    public static double FracWithCos(double x) {
+    public static double fracWithCos(double x) {
         // y=\frac{x}{1+\cos x}
         double c = Math.cos(x);
         if ((-EPSILON < (c+1)) && ((c+1) < EPSILON)) return Double.NaN;
         return x / (1D + c);
     }
     
-    public static boolean XyFixedEq(int x, int y) {
+    public static boolean xyFixedEq(int x, int y) {
         // y=xy
         return (x == 1) || (y == 0);
     }
     
-    public static double ExpSinProductFunc(double x) {
+    public static double expSinProductFunc(double x) {
         // y=e^{x}\sin(100xe)
         return Math.exp(x)*Math.sin(100D*x*Math.E);
     }
     
-    public static double SinAsinForPow(double x) {
+    public static double sinAsinForPow(double x) {
         // y=\sin^{2}(\arcsin(x^9))
         // equivalent to y=x^{18}, x\in[-1,1]
         if ((x >= -1D) && (x <= 1D)) {
@@ -94,14 +94,14 @@ public class UnusefulFunc {
         return Double.NaN;
     }
     
-    public static long GcdLcmSgn(long x) {
+    public static long gcdLcmSgn(long x) {
         // WIP
         long a = ThreadLocalRandom.current().nextLong(1L, 100L);
         long b = ThreadLocalRandom.current().nextLong(1L, 100L);
         return gcd(x, a) * lcm(x, b) * sign(x);
     }
     
-    public static double[] ManyANum(double x) {
+    public static double[] manyANum(double x) {
         double[] result = new double[UNIQUE.length];
         for (int i = 0; i < UNIQUE.length; i++) {
             result[i] = UNIQUE[i] * x;
@@ -109,19 +109,19 @@ public class UnusefulFunc {
         return result;
     }
     
-    public static double SixTrigonometricFuunction(double x) {
+    public static double sixTrigonometricFuunction(double x) {
         // The domain is too complicated, I'm too lazy to judge it
         return Math.sin(Math.cos(Math.tan(cot(csc(sec(x))))));
     }
 
-    public static double NprSin(int x) {
+    public static double nprSin(int x) {
         // \sin(\text{nPr}(x, x))
         // \text{nPr}(x,x) = x!
         BigInteger a = factorialBig(x);
         return sinBig(a);
     }
 
-    public static double SinLarge(int x) {
+    public static double sinLarge(int x) {
         // \sin(x^{22^{2}})
         return sinBig(powerBig(x, 484));
     }
