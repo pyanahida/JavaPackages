@@ -75,22 +75,21 @@ public class UnusefulFunc {
         }
         return result;
     }
-    
-// Planks
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 }
+// Planks
+/*When coding on a mobile phone, the input method often obscures the bottom of the page. These blank lines allow me to see all the content.*/
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+*/
