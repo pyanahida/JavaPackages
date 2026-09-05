@@ -10,7 +10,7 @@ public class UnusefulFunc {
         return Math.abs(a) / Math.gcd(a, b) * Math.abs(b);
     }
     public static long sign(long x) {
-        return Long.signum(x);  // return -1L, 0L, 1L
+        return (x>0L)?1L:((x<0L)?-1L:0L);
     }
     
     public static double SqrtPiExp(double x) {
@@ -48,5 +48,10 @@ public class UnusefulFunc {
             return result;
         }
         return Double.NaN;
+    }
+
+    public static long GcdLcmSgn(long x) {
+        // WIP
+        return -1L;
     }
 }
