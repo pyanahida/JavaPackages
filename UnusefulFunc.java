@@ -1,5 +1,7 @@
 package com.pyanahida.functions.unuseful;
 
+import java.math.BigInteger;
+
 public class UnusefulFunc {
     // Constant
     static private final double EPSILON = 1E-9D;
@@ -31,6 +33,13 @@ public class UnusefulFunc {
     }
     private static double sec(double x) {
         return 1.0 / Math.cos(x);
+    }
+    private static BigInteger factorialBig(int n) {
+        BigInteger result = BigInteger.ONE;
+        for (int i = 2; i <= n; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
+        }
+        return result;
     }
 
     // Main
@@ -91,6 +100,7 @@ public class UnusefulFunc {
         return Math.sin(Math.cos(Math.tan(cot(csc(sec(x))))));
     }
 }
+
 // Planks
 /*When coding on a mobile phone, the input method often obscures the bottom of the page. These blank lines allow me to see all the content.*/
 
