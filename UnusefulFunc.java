@@ -11,4 +11,11 @@ public class UnusefulFunc {
         double c = 32D * x;
         return (a / b) / c;
     }
+
+    static public double CRatio(double x) {
+        // \frac{x}{1+\cos x}
+        double c = Math.cos(x);
+        if ((-EPSILON < (c+1)) && ((c+1) < EPSILON) return Double.NaN;
+        return x / (1D + c);
+    }
 }
