@@ -52,6 +52,9 @@ public class UnusefulFunc {
         BigDecimal remainder = new BigDecimal(n).remainder(TWO_PI, new MathContext(100));
         return Math.sin(remainder.doubleValue());
     }
+    private static BigInteger powerBig(int x, int p) {
+        return BigInteger.valueOf(x).pow(p);
+    }
     
     // Main
     public static double SqrtPiExp(double x) {
@@ -116,6 +119,11 @@ public class UnusefulFunc {
         // \text{nPr}(x,x) = x!
         BigInteger a = factorialBig(x);
         return sinBig(a);
+    }
+
+    public static double SinLarge(int x) {
+        // \sin(x^{22^{2}})
+        return sinBig(powerBig(x, 484));
     }
 }
 
