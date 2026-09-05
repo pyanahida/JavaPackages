@@ -5,10 +5,6 @@ public class UnusefulFunc {
     static private final double EPSILON = 1E-9D;
 
     // Private
-    public static long lcm(long a, long b) {
-        if (a == 0 || b == 0) return 0;  // To prevent division by zero
-        return Math.abs(a) / Math.gcd(a, b) * Math.abs(b);
-    }
     public static long sign(long x) {
         return (x>0L)?1L:((x<0L)?-1L:0L);
     }
@@ -21,6 +17,10 @@ public class UnusefulFunc {
             b = temp;
         }
         return a;
+    }
+    public static long lcm(long a, long b) {
+        if (a == 0 || b == 0) return 0;  // To prevent division by zero
+        return Math.abs(a) / gcd(a, b) * Math.abs(b);
     }
     
     public static double SqrtPiExp(double x) {
@@ -62,6 +62,8 @@ public class UnusefulFunc {
 
     public static long GcdLcmSgn(long x) {
         // WIP
-        return -1L;
+        long a = ThreadLocalRandom.current().nextLong(1L, 100L);
+        long b = ThreadLocalRandom.current().nextLong(1L, 100L);
+        return gcd(x, a) * lcm(x, b) * sign(x);
     }
 }
