@@ -12,6 +12,16 @@ public class UnusefulFunc {
     public static long sign(long x) {
         return (x>0L)?1L:((x<0L)?-1L:0L);
     }
+    public static long gcd(long a, long b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        while (b != 0) {
+            long temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
+    }
     
     public static double SqrtPiExp(double x) {
         // y=\frac{\frac{47x}{72\sqrt{\frac{\pi}{8^x}}}}{32x}
