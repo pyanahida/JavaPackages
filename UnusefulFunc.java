@@ -3,6 +3,7 @@ package com.pyanahida.functions.unuseful;
 public class UnusefulFunc {
     // Constant
     static private final double EPSILON = 1E-9D;
+    static private final double[] UNIQUE = {999D, 0D, 1D, 1.5D, 2D, 3D, -1D, -1.5D, -2D, -3D, -0.5D, 0.5D, 0.25D, -0.25D};
 
     // Private
     public static long sign(long x) {
