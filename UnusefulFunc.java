@@ -1,6 +1,8 @@
 package com.pyanahida.functions.unuseful;
 
 import java.math.BigInteger;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 public class UnusefulFunc {
     // Constant
@@ -43,6 +45,12 @@ public class UnusefulFunc {
             result = result.multiply(BigInteger.valueOf(i));
         }
         return result;
+    }
+    private static double sinBig(BigInteger n) {
+        // This func was made by AI
+        // Calculate n mod 2π
+        BigDecimal remainder = new BigDecimal(n).remainder(TWO_PI, new MathContext(100));
+        return Math.sin(remainder.doubleValue());
     }
     
     // Main
@@ -107,8 +115,7 @@ public class UnusefulFunc {
         // \sin(\text{nPr}(x, x))
         // \text{nPr}(x,x) = x!
         BigInteger a = factorialBig(x);
-        return -1D;
-        // WIP
+        return sinBig(a);
     }
 }
 
