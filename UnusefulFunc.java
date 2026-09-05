@@ -22,7 +22,7 @@ public class UnusefulFunc {
         return (a / b) / c;
     }
     
-    public static double SqrtPiExp(double x) {
+    public static double FracWithCos(double x) {
         // y=\frac{x}{1+\cos x}
         double c = Math.cos(x);
         if ((-EPSILON < (c+1)) && ((c+1) < EPSILON)) return Double.NaN;
