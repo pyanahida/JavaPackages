@@ -6,7 +6,7 @@ public class UnusefulFunc {
     // Constant
     static private final double EPSILON = 1E-9D;
     static private final double[] UNIQUE = {999D, 0D, 1D, 1.5D, 2D, 3D, -1D, -1.5D, -2D, -3D, -0.5D, 0.5D, 0.25D, -0.25D};
-
+    
     // Private
     private static long sign(long x) {
         return (x>0L)?1L:((x<0L)?-1L:0L);
@@ -41,7 +41,7 @@ public class UnusefulFunc {
         }
         return result;
     }
-
+    
     // Main
     public static double SqrtPiExp(double x) {
         // y=\frac{\frac{47x}{72\sqrt{\frac{\pi}{8^x}}}}{32x}
@@ -79,14 +79,14 @@ public class UnusefulFunc {
         }
         return Double.NaN;
     }
-
+    
     public static long GcdLcmSgn(long x) {
         // WIP
         long a = ThreadLocalRandom.current().nextLong(1L, 100L);
         long b = ThreadLocalRandom.current().nextLong(1L, 100L);
         return gcd(x, a) * lcm(x, b) * sign(x);
     }
-
+    
     public static double[] ManyANum(double x) {
         double[] result = new double[UNIQUE.length];
         for (int i = 0; i < UNIQUE.length; i++) {
@@ -94,7 +94,7 @@ public class UnusefulFunc {
         }
         return result;
     }
-
+    
     public static double SixTrigonometricFuunction(double x) {
         // The domain is too complicated, I'm too lazy to judge it
         return Math.sin(Math.cos(Math.tan(cot(csc(sec(x))))));
