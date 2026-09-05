@@ -6,10 +6,10 @@ public class UnusefulFunc {
     static private final double[] UNIQUE = {999D, 0D, 1D, 1.5D, 2D, 3D, -1D, -1.5D, -2D, -3D, -0.5D, 0.5D, 0.25D, -0.25D};
 
     // Private
-    public static long sign(long x) {
+    private static long sign(long x) {
         return (x>0L)?1L:((x<0L)?-1L:0L);
     }
-    public static long gcd(long a, long b) {
+    private static long gcd(long a, long b) {
         a = Math.abs(a);
         b = Math.abs(b);
         while (b != 0) {
@@ -19,11 +19,21 @@ public class UnusefulFunc {
         }
         return a;
     }
-    public static long lcm(long a, long b) {
+    private static long lcm(long a, long b) {
         if (a == 0 || b == 0) return 0;  // To prevent division by zero
         return Math.abs(a) / gcd(a, b) * Math.abs(b);
     }
-    
+    private static double cot(double x) {
+        return 1.0 / Math.tan(x);
+    }
+    private static double csc(double x) {
+        return 1.0 / Math.sin(x);
+    }
+    private static double sec(double x) {
+        return 1.0 / Math.cos(x);
+    }
+
+    // Main
     public static double SqrtPiExp(double x) {
         // y=\frac{\frac{47x}{72\sqrt{\frac{\pi}{8^x}}}}{32x}
         if ((-EPSILON < x) && (x < EPSILON)) return Double.NaN;
@@ -74,6 +84,11 @@ public class UnusefulFunc {
             result[i] = UNIQUE[i] * x;
         }
         return result;
+    }
+
+    public static double SixTrigonometricFuunction(double x) {
+        // The domain is too complicated, I'm too lazy to judge it
+        return Math.sin(Math.cos(Math.tan(cot(csc(sec(x))))));
     }
 }
 // Planks
